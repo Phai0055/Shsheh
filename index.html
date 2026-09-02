@@ -11,10 +11,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0f172a">
 
-  <!-- โลโก้แอปของคุณ -->
+  <!-- โลโก้แอปสำหรับ iOS และ Android -->
   <link rel="icon" type="image/png" sizes="192x192" href="https://img2.pic.in.th/1000067459.png">
   <link rel="apple-touch-icon" href="https://img2.pic.in.th/1000067459.png">
+
+  <!-- ฝัง Web App Manifest บังคับให้ Android สร้างเป็น PWA App แท้ -->
+  <link rel="manifest" href='data:application/manifest+json,{"name":"Master Webhook","short_name":"Master Webhook","start_url":".","display":"standalone","background_color":"#0f172a","theme_color":"#0f172a","icons":[{"src":"https://img2.pic.in.th/1000067459.png","sizes":"192x192 512x512","type":"image/png","purpose":"any maskable"}]}'>
 
   <style>
     body, html {
@@ -33,9 +37,8 @@
 </head>
 <body>
 
-  <!-- *** นำ URL Web App (ลงท้ายด้วย /exec) จาก Apps Script มาใส่ตรงนี้ *** -->
+  <!-- นำ URL Web App ของ Apps Script มาใส่ตรงนี้ -->
   <iframe src="https://script.google.com/macros/s/AKfycbzwufzN1r-qJnuVC3v4chJT0LR9SYpinevFjrcg9zcWdRE_e7peEhg1h4HE6s9b7XY/exec"></iframe>
 
 </body>
 </html>
-
