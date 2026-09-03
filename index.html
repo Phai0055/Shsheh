@@ -3,46 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  
-  <title>Master Webhook</title>
-  <meta name="theme-color" content="#0f172a">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- ดึงไฟล์ Manifest -->
+  <title>Scoreboard App</title>
+  <meta name="theme-color" content="#111111">
   <link rel="manifest" href="manifest.json">
-
-  <!-- โลโก้แอป -->
-  <link rel="icon" type="image/png" sizes="192x192" href="https://img2.pic.in.th/1000067459.png">
-  <link rel="apple-touch-icon" href="https://img2.pic.in.th/1000067459.png">
-
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      background-color: #0f172a;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #111; }
+    iframe { width: 100%; height: 100%; border: none; }
   </style>
 </head>
 <body>
-
-  <!-- นำ URL Web App ของ Apps Script มาใส่ตรงนี้ -->
-  <iframe src="https://script.google.com/macros/s/AKfycbzwufzN1r-qJnuVC3v4chJT0LR9SYpinevFjrcg9zcWdRE_e7peEhg1h4HE6s9b7XY/exec"></iframe>
+  <!-- เอา URL /exec ของคุณมาใส่ตรงนี้ -->
+  <iframe src="https://script.google.com/macros/s/AKfycbyvkZhL2fW7GgUSOFAhbktv-7kguPHmjmmYTk_XLDXxtDOsGlp1l96CKXQCUQAYe-_rvQ/exec"></iframe>
 
   <script>
-    // เรียกใช้งาน Service Worker เพื่อปลดล็อกให้ Android สร้างเป็นแอปแท้ (ไม่มีตรา Chrome)
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js');
-      });
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
     }
   </script>
 </body>
